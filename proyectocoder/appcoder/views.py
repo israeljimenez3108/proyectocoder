@@ -5,12 +5,29 @@ from appcoder.models import Curso
 
 # Create your views here.
 
-def listado_cursos(request):
-    cursos = Curso.objects.all()
+def inicio(request):
+    return HttpResponse("Estas en el inicio")
 
-    cadena_respuesta = ""
+def cursos(request):
+    return HttpResponse("Estas en cursos")
 
-    for curso in cursos:
-        cadena_respuesta += f"({curso.nombre}, {curso.camada})" + " | " 
+def estudiantes(request):
+    return HttpResponse("Estas en estudiantes")
 
-    return HttpResponse(cadena_respuesta)
+def profesores(request):
+    return HttpResponse("Estas en profesores")
+
+def entregables(request):
+    return HttpResponse("Estas en entregables")
+
+# def listado_cursos(request):
+#     cursos = Curso.objects.all()
+
+#     cadena_respuesta = ""
+
+#     for curso in cursos:
+#         cadena_respuesta += f"({curso.nombre}, {curso.camada})" + " | " 
+
+#     return HttpResponse(cadena_respuesta)
+
+

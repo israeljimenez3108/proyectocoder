@@ -6,7 +6,7 @@ from appcoder.models import Curso
 # Create your views here.
 
 def inicio(request):
-    return render(request, "appcoder/inicio.html")
+    return render(request, "appcoder/index.html")
 
 def cursos(request):
     return HttpResponse("Estas en cursos")
